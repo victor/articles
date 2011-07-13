@@ -24,7 +24,7 @@ Esto instruirá a brew a descargarse el código fuente de la utilidad **wget**, 
 
 Por cierto, por algún extraño motivo, en MacOS X, `/usr/local/bin` no está antes en el `$PATH` que `/usr/local/`, con lo cual, si instalamos alguna herramienta de las que vengan con el sistema o con Xcode, nos vamos a encontrar que la del sistema tiene prioridad sobre la versión que nosotros hemos instalado explícitamente (con lo cual, es como si no hubieramos hecho nada). En cualquier otro sistema UNIX (o linux), lo normal es que las customizaciones tomen prioridad, así que no acabo de entender muy bien esta política. Podemos solucionar esto de dos maneras, editando nuestro fichero `~/.bash_profile` para modificar la variable de entorno `$PATH`, o bien cambiando el orden en `/etc/paths` (lo cual va a requerir permisos de root, al aplicarse a todo el sistema).
 
-Las definiciones de los paquetes en homebrew siguen la metáfora de una cervecera. Cada paquete es una *receta* o *fórmula* para elaborar un… bueno, en castellano no tenemos una buena traducción para *brew*, en el sentido cervecero. Podríamos abusar del lenguaje y usar la palabra caldo, que los vinateros usan, pero lo dejaremos como *brew*. *To brew* en inglés es también un verbo, que es lo que representa el comando que usamos.
+Las definiciones de los paquetes en homebrew siguen la metáfora de una cervecera. Cada paquete es una *receta* o *fórmula* para elaborar un… bueno, en castellano no tenemos una buena traducción para *brew*, en el sentido cervecero. Brebaje suena parecido pero es algo completamente distinto. Podríamos abusar del lenguaje y usar la palabra caldo, que los vinateros usan, pero lo dejaremos como *brew*. *To brew* en inglés es también un verbo, que es lo que representa el comando que usamos.
 
 En fin, después de esta digresión, paso a enumerar los comandos más habituales de que disponemos para gestionar los paquetes. Lo mejor es que echemos un vistazo al manual de `brew` y los veamos cuando tengamos dudas:
 
@@ -57,7 +57,7 @@ que actualizará brew y sus fórmulas, y luego podemos hacer algo como
 
     brew install $(brew outdated)
 
-para que nos instale las fórmulas nuevas de las que tengamos instaladas. Normalmente, al actualizar una fórmula, nos instala la versión nueva, pero no retira las antiguas, que siguen instaladas (aunque fuera del `$PATH`). Para limpiar estas versiones antiguas, el comando que necesitamos es
+para que nos instale las fórmulas nuevas de las que tengamos instaladas. Normalmente, al actualizar una fórmula nos instala la versión nueva pero no retira las antiguas, que siguen instaladas (aunque fuera del `$PATH`). Para limpiar estas versiones antiguas, el comando que necesitamos es
 
     brew cleanup
 
